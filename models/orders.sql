@@ -7,5 +7,5 @@ WITH tb1 as(
     user_id,
     status
      from {{source('datafeed_shared_schema','STG_ORDERS')}})
-    select * from tb1
+    select * from tb1 
 
