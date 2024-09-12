@@ -8,9 +8,10 @@ with consumer as (
             RISHIKESH,
             ({{calculate_amount('amount','RISHIKESH')}}) as new_amount
             from 
-            {{source('datafeed_shared_schema','SPCOLUMN_MACRO')}})
+            {{source('datafeed_shared_schema','SPCOLUMN_MACRO')}}
+            )
 
-select * from consumer 
+select * from consumer  
 
 
 

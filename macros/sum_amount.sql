@@ -1,3 +1,10 @@
-{% macro sum_column(column_name, table_name) %}
-    SUM({{ new_amount }}) AS total_sum
-{% endmacro %}
+{{ config(materialized='table')
+}}
+with cte as (
+select sum ({{'amount'}}) as rishkesh from {{source('datafeed_shared_schema','SPCOLUMN_MACRO' )
+
+select * from cte 
+
+
+
+
