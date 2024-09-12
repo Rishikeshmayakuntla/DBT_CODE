@@ -6,7 +6,7 @@ with emp as (
             order_id,
             payment_method,
             amount,
-            {{ new_macro('amount') }}) as rishikesh
+            {{ new_macro('amount') }} as rishikesh
             from {{source('datafeed_shared_schema','STG_PAYMENTS')}})
 
             select * from emp     
